@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://di1lnp3ma8w7n"]
+
+[node name="Dock" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Archivo de Localización (.csv)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LocFileInput" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "res://translation.csv"
+
+[node name="FilePickerButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Buscar"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Lenguaje de Origen:"
+
+[node name="SourceLanguageOption" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Lenguaje Destino:"
+
+[node name="LanguageOption" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Tono del diálogo:"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ToneInput" type="LineEdit" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Regular"
+placeholder_text = "Ingresa el tono del dialogo"
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Identificador de Personaje:"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CharacterIDInput" type="LineEdit" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Ejemplo: NPC1"
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Añadir Idioma:"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AddLanguageSelector" type="OptionButton" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddLanguageButton" type="Button" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Añadir Idioma"
+
+[node name="ScanButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Escanear"
+
+[node name="TranslateButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Traducir"
+
+[node name="TranslateAllButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Traducir Todo"
+
+[node name="AddRowButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Añadir fila"
+
+[node name="SaveButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Guardar"
+
+[node name="CreateLocFileButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Crear Archivo de Localización"
+
+[node name="TranslationTable" type="Tree" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+column_titles_visible = true
+allow_reselect = true
+
+[node name="ExplanationText" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+wrap_mode = 1
